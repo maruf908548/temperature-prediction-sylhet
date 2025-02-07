@@ -94,10 +94,8 @@ input_data_df = pd.DataFrame([input_data])
 # Load Model
 
 url = "https://drive.google.com/file/d/1bPUWSsw2s1mNuJ-RrrkpHKe36dP9P-KT/view?usp=sharing"
-output = "model_with_pipeline.pkl"
-gdown.download(url, output, quiet=False)
 
-model = joblib.load(output)
+model = joblib.load(url)
 
 # model = joblib.load("../models/model_with_pipeline.pkl")
 
