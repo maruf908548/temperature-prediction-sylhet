@@ -94,11 +94,14 @@ input_data_df = pd.DataFrame([input_data])
 # Load Model
 
 # Google Drive file ID
+
 file_id = "1bPUWSsw2s1mNuJ-RrrkpHKe36dP9P-KT" 
+output_path = "model_with_pipeline.pkl"
 
-url = "https://drive.google.com/uc?id={file_id}"
+# Download the file
+gdown.download(f"https://drive.google.com/uc?id={file_id}", output_path, quiet=False)
 
-model = joblib.load(url)
+model = joblib.load(output_path)
 
 # model = joblib.load("../models/model_with_pipeline.pkl")
 
