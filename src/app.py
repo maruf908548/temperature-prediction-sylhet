@@ -29,3 +29,4 @@ sample_data_df = pd.DataFrame([sample_data])
 model = joblib.load('models/model_with_pipeline.pkl')
 result = model.predict(sample_data_df)
 print(result[0])
+
