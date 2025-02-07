@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+import gdown
 import joblib
 
 # Set Page Configuration
@@ -91,7 +92,14 @@ input_data = {
 input_data_df = pd.DataFrame([input_data])
 
 # Load Model
-model = joblib.load("../models/model_with_pipeline.pkl")
+
+url = "https://drive.google.com/file/d/1bPUWSsw2s1mNuJ-RrrkpHKe36dP9P-KT/view?usp=sharing"
+output = "model_with_pipeline.pkl"
+gdown.download(url, output, quiet=False)
+
+model = joblib.load(output)
+
+# model = joblib.load("../models/model_with_pipeline.pkl")
 
 # Prediction
 result = model.predict(input_data_df)
