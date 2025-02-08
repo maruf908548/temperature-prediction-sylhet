@@ -13,7 +13,7 @@ import joblib
 data = pd.read_csv('data/air_quality_index_dataset.csv')
 
 # Drop SO2 and NOX features
-data = data.drop(columns=['SO2', 'NOX'])
+# data = data.drop(columns=['SO2', 'NOX'])
 
 # Drop any rows where Temperature is missing
 data = data.dropna(subset=['Temperature'])
@@ -85,7 +85,7 @@ print(f'RMSE: {rmse}')
 
 # Save the model and preprocessors
 os.makedirs('models', exist_ok=True)
-joblib.dump(model, 'models/random_forest.pkl')
+joblib.dump(model, 'models/random_forest.pkl', compress=3)
 joblib.dump(scaler, 'models/scaler.pkl')
 joblib.dump(encoder, 'models/encoder.pkl')
 joblib.dump(num_imputer, 'models/num_imputer.pkl')

@@ -97,15 +97,15 @@ input_data_df = pd.DataFrame([input_data])
 
 # Google Drive file ID
 
-file_id = "1bPUWSsw2s1mNuJ-RrrkpHKe36dP9P-KT" 
-output_path = "model_with_pipeline.pkl"
+# file_id = "1bPUWSsw2s1mNuJ-RrrkpHKe36dP9P-KT" 
+# output_path = "model_with_pipeline.pkl"
 
 # Download the file
-gdown.download(f"https://drive.google.com/uc?id={file_id}", output_path, quiet=False)
+# gdown.download(f"https://drive.google.com/uc?id={file_id}", output_path, quiet=False)
 
-model = joblib.load(output_path)
+# model = joblib.load(output_path)
 
-# model = joblib.load("../models/model_with_pipeline.pkl")
+model = joblib.load("../models/model_with_pipeline.pkl")
 
 # Prediction
 result = model.predict(input_data_df)
