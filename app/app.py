@@ -59,7 +59,6 @@ PM2_5 = st.sidebar.number_input("💨 PM2.5 Level", value=27.87)
 PM10 = st.sidebar.number_input("🌫 PM10 Level", value=31.03)
 Wind_Speed = st.sidebar.number_input("💨 Wind Speed", value=3.58)
 Wind_Dir = st.sidebar.number_input("🧭 Wind Direction", value=203.18)
-Temperature = st.sidebar.number_input("🌡 Temperature", value=25.22)
 RH = st.sidebar.number_input("💦 Relative Humidity", value=84.16)
 Solar_Rad = st.sidebar.number_input("☀ Solar Radiation", value=7.11)
 BP = st.sidebar.number_input("🌡 Barometric Pressure", value=1092.60)
@@ -82,7 +81,6 @@ input_data = {
     "PM10": PM10,
     "Wind Speed": Wind_Speed,
     "Wind Dir": Wind_Dir,
-    "Temperature": Temperature,
     "RH": RH,
     "Solar Rad": Solar_Rad,
     "BP": BP,
@@ -105,7 +103,6 @@ input_data_df = pd.DataFrame([input_data])
 
 # model = joblib.load(output_path)
 
-# model = joblib.load("../models/model_with_pipeline.pkl")
 model = joblib.load("models/model_with_pipeline.pkl")
 
 # Prediction
