@@ -106,7 +106,7 @@ input_data_df = pd.DataFrame([input_data])
 # model = joblib.load(output_path)
 
 # model = joblib.load("../models/model_with_pipeline.pkl")
-model = joblib.load("./model_with_pipeline.pkl")
+model = joblib.load("../models/model_with_pipeline.pkl")
 
 # Prediction
 result = model.predict(input_data_df)
