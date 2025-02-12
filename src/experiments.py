@@ -12,9 +12,6 @@ import joblib
 # Load data
 data = pd.read_csv('data/air_quality_index_dataset.csv')
 
-# Drop SO2 and NOX features
-# data = data.drop(columns=['SO2', 'NOX'])
-
 # Drop any rows where Temperature is missing
 data = data.dropna(subset=['Temperature'])
 
